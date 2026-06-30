@@ -1,0 +1,8 @@
+{
+  "common": {
+    "title": "Daniel Yosep Portfolio",
+    "description": "Nuxt 4 portfolio foundation is ready.",
+    "switchLanguage": "Switch language",
+    "toggleTheme": "Toggle theme"
+  }
+}
