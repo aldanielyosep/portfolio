@@ -1,6 +1,6 @@
 # Daniel Yosep Portfolio
 
-[![CI](https://github.com/<username>/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/portfolio/actions/workflows/ci.yml)
+[![CI](https://github.com/aldanielyosep/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/aldanielyosep/portfolio/actions/workflows/ci.yml)
 
 ![Nuxt](https://img.shields.io/badge/Nuxt-4-00DC82?logo=nuxt)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
