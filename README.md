@@ -1,75 +1,139 @@
-# Nuxt Minimal Starter
+# Daniel Yosep Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, fast, and bilingual personal portfolio website built with **Nuxt 4**.
 
-## Setup
+This website showcases my professional experience, technical skills, career journey, AI projects, and engineering leadership.
 
-Make sure to install dependencies:
+> 🚧 Currently under active development.
+
+---
+
+## ✨ Features
+
+- 🌐 Bilingual (English & Indonesian)
+- 📱 Fully Responsive
+- 🌙 Dark / Light Mode
+- ⚡ Static Site Generation (SSG)
+- 🔍 SEO Optimized
+- 📄 Downloadable Resume (CV)
+- 💼 Career Timeline
+- 🛠 Skills & Technologies
+- 🚀 Project Portfolio
+- 🤖 AI Portfolio
+- 📚 Technical Blog (Planned)
+
+---
+
+## 🛠 Tech Stack
+
+| Category          | Technology       |
+| ----------------- | ---------------- |
+| Framework         | Nuxt 4           |
+| Language          | TypeScript       |
+| Styling           | Tailwind CSS     |
+| Images            | Nuxt Image       |
+| Fonts             | Nuxt Fonts       |
+| i18n              | Nuxt i18n        |
+| Theme             | Color Mode       |
+| Linting           | ESLint           |
+| Formatting        | Prettier         |
+| Git Hooks         | Husky            |
+| Commit Convention | Commitlint       |
+| Deployment        | Cloudflare Pages |
+
+---
+
+## 🚀 Getting Started
+
+Install dependencies:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The application will be available at:
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```text
+http://localhost:3000
 ```
 
-Locally preview production build:
+---
 
-```bash
-# npm
-npm run preview
+## 📦 Available Scripts
 
-# pnpm
-pnpm preview
+| Command                | Description                  |
+| ---------------------- | ---------------------------- |
+| `npm run dev`          | Start development server     |
+| `npm run build`        | Build for production         |
+| `npm run preview`      | Preview production build     |
+| `npm run generate`     | Generate static site         |
+| `npm run lint`         | Run ESLint                   |
+| `npm run lint:fix`     | Fix ESLint issues            |
+| `npm run format`       | Format source code           |
+| `npm run format:check` | Check formatting             |
+| `npm run typecheck`    | Run TypeScript type checking |
 
-# yarn
-yarn preview
+---
 
-# bun
-bun run preview
+## 📂 Project Structure
+
+```text
+app/
+components/
+content/
+public/
+assets/
+types/
+utils/
+server/
+
+docs/
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+---
+
+## 🌍 Languages
+
+- 🇺🇸 English
+- 🇮🇩 Bahasa Indonesia
+
+---
+
+## 📄 Resume
+
+The latest resume will be available directly from the website.
+
+---
+
+## 🚀 Deployment
+
+This website is deployed using **Cloudflare Pages**.
+
+Every push to the `main` branch automatically triggers a production deployment.
+
+---
+
+## 🗺 Roadmap
+
+- [ ] Landing Page
+- [ ] About Me
+- [ ] Career Timeline
+- [ ] Skills
+- [ ] Project Portfolio
+- [ ] AI Portfolio
+- [ ] Resume Download
+- [ ] Blog
+- [ ] SEO Optimization
+- [ ] Analytics
+
+---
+
+## 📜 License
+
+MIT License

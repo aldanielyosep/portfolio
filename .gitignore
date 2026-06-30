@@ -12,15 +12,27 @@ node_modules
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Misc
-.DS_Store
+.vscode/
+.idea/
 .fleet
-.idea
+.DS_Store
+Thumbs.db
 
 # Local env files
 .env
 .env.*
 !.env.example
+
+coverage/
+
+*.tmp
+*.temp
+*.tsbuildinfo
 
 TODO.md
