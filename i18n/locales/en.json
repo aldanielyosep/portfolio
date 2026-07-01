@@ -33,5 +33,20 @@
       "projects": "Projects area is prepared for featured work cards and case studies.",
       "contact": "Contact block placeholder is ready for links and contact form."
     }
+  },
+  "home": {
+    "phaseReady": "Phase 5 home is in progress",
+    "hero": {
+      "name": "Daniel Yosep",
+      "title": "Engineering Manager and Software Architect",
+      "intro": "I design and lead scalable digital products, bridging strong engineering execution with product impact across backend, platform, and AI initiatives.",
+      "photoAlt": "Portrait of Daniel Yosep",
+      "actions": {
+        "downloadCv": "Download CV",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "Email"
+      }
+    }
   }
 }

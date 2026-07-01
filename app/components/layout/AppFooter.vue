@@ -12,7 +12,7 @@
 
       <div class="flex items-center gap-4 text-sm">
         <a
-          href="https://github.com"
+          href="https://github.com/aldanielyosep"
           target="_blank"
           rel="noreferrer"
           class="text-slate-600 transition hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300"
@@ -20,7 +20,7 @@
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/aldanielyosep"
           target="_blank"
           rel="noreferrer"
           class="text-slate-600 transition hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-300"

@@ -33,5 +33,20 @@
       "projects": "Area proyek siap untuk kartu karya unggulan dan studi kasus.",
       "contact": "Placeholder kontak siap untuk tautan dan form kontak."
     }
+  },
+  "home": {
+    "phaseReady": "Phase 5 beranda sedang dikerjakan",
+    "hero": {
+      "name": "Daniel Yosep",
+      "title": "Engineering Manager dan Software Architect",
+      "intro": "Saya merancang dan memimpin produk digital yang scalable, menghubungkan eksekusi engineering yang kuat dengan dampak produk di area backend, platform, dan inisiatif AI.",
+      "photoAlt": "Foto profil Daniel Yosep",
+      "actions": {
+        "downloadCv": "Unduh CV",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "email": "Email"
+      }
+    }
   }
 }
