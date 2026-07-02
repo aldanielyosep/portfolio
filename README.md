@@ -166,6 +166,10 @@ Required GitHub repository secrets:
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
 
+Optional GitHub repository variable:
+
+- `CLOUDFLARE_PAGES_PROJECT_NAME` (defaults to `portfolio`)
+
 Recommended API token permissions:
 
 - `Cloudflare Pages:Edit`
