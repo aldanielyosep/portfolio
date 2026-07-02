@@ -262,5 +262,125 @@
       "graduationYear": "Lulus 2015",
       "summary": "Menyelesaikan studi sarjana ilmu komputer di BINUS sebagai fondasi untuk karier profesional saya di software engineering dan enterprise systems."
     }
+  },
+  "projects": {
+    "kicker": "Karya Pilihan",
+    "title": "Studi kasus dari delivery enterprise dan personal build",
+    "summary": "Sebagian besar project saya adalah inisiatif enterprise di lingkungan private. Section ini menampilkan studi kasus anonim berbasis dampak nyata delivery, ditambah satu project personal yang masih berjalan.",
+    "confidentialityNote": "Beberapa project sengaja dianonimkan atau ditandai private karena kebijakan kerahasiaan perusahaan dan keamanan internal.",
+    "labels": {
+      "myRole": "Peran Saya",
+      "techStack": "Tech Stack",
+      "challenges": "Tantangan",
+      "achievements": "Pencapaian",
+      "github": "GitHub",
+      "demo": "Live Demo"
+    },
+    "items": [
+      {
+        "title": "Enterprise AI Platform",
+        "status": "Internal",
+        "thumbnail": "AI Platform",
+        "description": "Platform AI enterprise untuk adopsi AI internal yang aman melalui controlled access, SSO, dan workflow praktis untuk produktivitas engineering.",
+        "role": "Engineering Manager yang tetap hands-on dengan pengalaman memimpin modernisasi platform enterprise, berkontribusi dalam perancangan arsitektur solusi, pengembangan inisiatif AI, serta memastikan delivery produk yang andal dan skalabel.",
+        "techStack": [
+          "LibreChat",
+          "Google Gemini",
+          "AWS Bedrock (PoC)",
+          "Chainlit (PoC)",
+          "Keycloak",
+          "Docker"
+        ],
+        "challenges": [
+          "Menyeimbangkan kontrol keamanan enterprise dengan usability harian yang tetap praktis.",
+          "Merancang model platform yang adaptif terhadap perkembangan tooling AI yang cepat."
+        ],
+        "achievements": [
+          "Memungkinkan penggunaan AI enterprise yang aman dengan autentikasi dan governance terpusat.",
+          "Meningkatkan produktivitas tim melalui workflow engineering berbantuan AI yang reusable."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "Enterprise Retail Operations Platform",
+        "status": "Internal",
+        "thumbnail": "Retail Platform",
+        "description": "Platform operasional retail inti untuk mendukung eksekusi multi-business unit, alur kerja operasional, dan konsistensi data.",
+        "role": "Platform architect dan delivery lead untuk keputusan arsitektur, prioritas delivery, dan eksekusi lintas tim.",
+        "techStack": [
+          "Ruby on Rails",
+          ".NET",
+          "PostgreSQL",
+          "SQL Server",
+          "Docker Swarm",
+          "Redpanda"
+        ],
+        "challenges": [
+          "Menjaga konsistensi workflow di banyak unit bisnis yang berbeda.",
+          "Menskalakan reliabilitas platform untuk operasional retail nasional."
+        ],
+        "achievements": [
+          "Mendukung operasional pada 2.510 toko di 6 unit bisnis.",
+          "Digunakan oleh 12.587 pengguna internal melalui layanan platform terpusat."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "Inventory Synchronization and Cycle Count Platform",
+        "status": "Internal",
+        "thumbnail": "Inventory Platform",
+        "description": "Platform inventory event-driven untuk sinkronisasi volume tinggi dan pemrosesan cycle count pada operasional retail terdistribusi.",
+        "role": "System architect yang bertanggung jawab pada desain arsitektur, strategi async processing, dan reliabilitas alur data.",
+        "techStack": ["Ruby on Rails", "Redpanda", "PostgreSQL", "Docker"],
+        "challenges": [
+          "Menangani sinkronisasi asynchronous throughput tinggi secara konsisten di skala besar.",
+          "Menjaga konsistensi data di konteks operasional yang terdistribusi."
+        ],
+        "achievements": [
+          "Memproses sinkronisasi 18-22 juta record per hari.",
+          "Berjalan pada 24 topics dengan 2.1+ juta asynchronous messages."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "Enterprise Payment Platform",
+        "status": "Internal",
+        "thumbnail": "Payment Platform",
+        "description": "Platform pembayaran enterprise dengan integrasi multi-channel dan alur rekonsiliasi untuk transaksi volume tinggi.",
+        "role": "Architecture dan integration lead untuk onboarding kanal pembayaran, desain platform, dan delivery governance.",
+        "techStack": ["Laravel", "Java", "SQL Server", "MySQL", "SAP", "Amdocs", "Jenkins"],
+        "challenges": [
+          "Menjaga reliabilitas di banyak integrasi eksternal kanal pembayaran.",
+          "Meningkatkan kualitas rekonsiliasi sekaligus menurunkan pekerjaan operasional manual."
+        ],
+        "achievements": [
+          "Memproses sekitar 10K-12K transaksi per hari.",
+          "Mengintegrasikan 13+ kanal pembayaran dalam satu ekosistem enterprise payment."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "E-commerce OS (Personal Project)",
+        "status": "In Progress",
+        "thumbnail": "Personal Build",
+        "description": "Project personal e-commerce operating system dengan fokus pada workflow inti seperti katalog, pricing, dan operasional order.",
+        "role": "Founder dan full-stack builder yang menangani arsitektur, implementasi, dan iterasi produk.",
+        "techStack": ["Nuxt", "TypeScript", "Node.js", "PostgreSQL"],
+        "challenges": [
+          "Menyeimbangkan kecepatan iterasi produk dengan keputusan arsitektur yang maintainable.",
+          "Menentukan scope MVP sambil tetap mendesain untuk extensibility jangka panjang."
+        ],
+        "achievements": [
+          "Menyusun arah produk dan fondasi arsitektur utama.",
+          "Masih aktif berjalan dengan milestone implementasi bertahap."
+        ],
+        "github": "In progress / not public yet",
+        "demo": "In progress"
+      }
+    ]
   }
 }

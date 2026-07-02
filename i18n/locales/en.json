@@ -262,5 +262,125 @@
       "graduationYear": "Graduated 2015",
       "summary": "Completed undergraduate study in computer science at BINUS, building the foundation for professional work in software engineering and enterprise systems."
     }
+  },
+  "projects": {
+    "kicker": "Selected Work",
+    "title": "Case studies from enterprise delivery and personal builds",
+    "summary": "Most of my projects are enterprise initiatives built in private environments. This section presents anonymized, impact-focused case studies based on real delivery outcomes, plus one personal project currently in progress.",
+    "confidentialityNote": "Some projects are intentionally anonymized or marked private due to company confidentiality and internal security policies.",
+    "labels": {
+      "myRole": "My Role",
+      "techStack": "Tech Stack",
+      "challenges": "Challenges",
+      "achievements": "Achievements",
+      "github": "GitHub",
+      "demo": "Live Demo"
+    },
+    "items": [
+      {
+        "title": "Enterprise AI Platform",
+        "status": "Internal",
+        "thumbnail": "AI Platform",
+        "description": "Enterprise AI platform enabling secure internal AI adoption through controlled access, SSO, and practical workflows for engineering productivity.",
+        "role": "Engineering Manager with hands-on experience leading enterprise platform modernization while contributing to solution architecture, AI initiatives, and engineering delivery.",
+        "techStack": [
+          "LibreChat",
+          "Google Gemini",
+          "AWS Bedrock (PoC)",
+          "Chainlit (PoC)",
+          "Keycloak",
+          "Docker"
+        ],
+        "challenges": [
+          "Balancing enterprise security controls with practical day-to-day usability.",
+          "Designing a platform model that can evolve with rapidly changing AI tooling."
+        ],
+        "achievements": [
+          "Enabled secure enterprise AI usage with centralized authentication and governance.",
+          "Improved team productivity through reusable AI-assisted engineering workflows."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "Enterprise Retail Operations Platform",
+        "status": "Internal",
+        "thumbnail": "Retail Platform",
+        "description": "Core retail operations platform supporting multi-business execution across store operations, workflows, and operational data consistency.",
+        "role": "Platform architect and delivery lead for architecture decisions, prioritization, and cross-team execution.",
+        "techStack": [
+          "Ruby on Rails",
+          ".NET",
+          "PostgreSQL",
+          "SQL Server",
+          "Docker Swarm",
+          "Redpanda"
+        ],
+        "challenges": [
+          "Maintaining consistency across diverse workflows and multiple business units.",
+          "Scaling platform reliability for nationwide retail operations."
+        ],
+        "achievements": [
+          "Supported operations across 2,510 stores and 6 business units.",
+          "Enabled usage by 12,587 internal users through centralized platform services."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "Inventory Synchronization and Cycle Count Platform",
+        "status": "Internal",
+        "thumbnail": "Inventory Platform",
+        "description": "Event-driven inventory platform for high-volume synchronization and cycle count processing across distributed retail operations.",
+        "role": "System architect responsible for architecture design, async processing strategy, and data flow reliability.",
+        "techStack": ["Ruby on Rails", "Redpanda", "PostgreSQL", "Docker"],
+        "challenges": [
+          "Handling high-throughput asynchronous synchronization reliably at scale.",
+          "Preserving data consistency across distributed operational contexts."
+        ],
+        "achievements": [
+          "Processed 18-22 million synchronized records per day.",
+          "Operated on 24 topics with 2.1+ million asynchronous messages."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "Enterprise Payment Platform",
+        "status": "Internal",
+        "thumbnail": "Payment Platform",
+        "description": "Enterprise-grade payment platform integrating multiple payment channels and reconciliation flows for high-volume transactions.",
+        "role": "Architecture and integration lead across payment channel onboarding, platform design, and delivery governance.",
+        "techStack": ["Laravel", "Java", "SQL Server", "MySQL", "SAP", "Amdocs", "Jenkins"],
+        "challenges": [
+          "Managing reliability across many external payment integrations.",
+          "Improving reconciliation quality while reducing manual operational work."
+        ],
+        "achievements": [
+          "Processed around 10K-12K transactions per day.",
+          "Integrated 13+ payment channels in one enterprise payment ecosystem."
+        ],
+        "github": "Private",
+        "demo": "Internal only"
+      },
+      {
+        "title": "E-commerce OS (Personal Project)",
+        "status": "In Progress",
+        "thumbnail": "Personal Build",
+        "description": "Personal e-commerce operating system focused on foundational commerce workflows such as catalog, pricing, and order operations.",
+        "role": "Founder and full-stack builder, handling architecture, implementation, and product iteration.",
+        "techStack": ["Nuxt", "TypeScript", "Node.js", "PostgreSQL"],
+        "challenges": [
+          "Balancing product iteration speed with maintainable architecture decisions.",
+          "Defining MVP scope while designing for future extensibility."
+        ],
+        "achievements": [
+          "Established core product direction and foundational architecture.",
+          "Actively progressing through implementation milestones."
+        ],
+        "github": "In progress / not public yet",
+        "demo": "In progress"
+      }
+    ]
   }
 }

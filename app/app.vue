@@ -383,10 +383,139 @@
       </section>
 
       <section id="projects" class="scroll-mt-28 py-14">
-        <h2 class="text-2xl font-semibold">{{ t('layout.nav.projects') }}</h2>
-        <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
-          {{ t('layout.placeholder.projects') }}
-        </p>
+        <div class="mb-8 max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700 dark:text-brand-300"
+          >
+            {{ t('projects.kicker') }}
+          </p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+            {{ t('projects.title') }}
+          </h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">
+            {{ t('projects.summary') }}
+          </p>
+          <p
+            class="mt-3 rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300"
+          >
+            {{ t('projects.confidentialityNote') }}
+          </p>
+        </div>
+
+        <div class="grid gap-4 lg:grid-cols-2">
+          <article
+            v-for="project in projects"
+            :key="project.title"
+            class="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/60"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-300"
+                >
+                  {{ project.thumbnail }}
+                </p>
+                <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-slate-50">
+                  {{ project.title }}
+                </h3>
+              </div>
+              <span
+                class="shrink-0 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+              >
+                {{ project.status }}
+              </span>
+            </div>
+
+            <p class="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              {{ project.description }}
+            </p>
+
+            <div class="mt-5 space-y-4">
+              <div>
+                <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  {{ projectLabels.myRole }}
+                </p>
+                <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {{ project.role }}
+                </p>
+              </div>
+
+              <div>
+                <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  {{ projectLabels.techStack }}
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span
+                    v-for="technology in project.techStack"
+                    :key="technology"
+                    class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+                  >
+                    {{ technology }}
+                  </span>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  {{ projectLabels.challenges }}
+                </p>
+                <ul class="mt-2 space-y-1.5 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  <li v-for="challenge in project.challenges" :key="challenge">{{ challenge }}</li>
+                </ul>
+              </div>
+
+              <div>
+                <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                  {{ projectLabels.achievements }}
+                </p>
+                <ul class="mt-2 space-y-1.5 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  <li v-for="achievement in project.achievements" :key="achievement">
+                    {{ achievement }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="mt-5 grid gap-3 border-t border-slate-200 pt-4 text-sm dark:border-slate-800"
+            >
+              <div class="flex items-start justify-between gap-3">
+                <p class="font-semibold text-slate-900 dark:text-slate-100">
+                  {{ projectLabels.github }}
+                </p>
+                <a
+                  v-if="isExternalLink(project.github)"
+                  :href="project.github"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-brand-700 hover:underline dark:text-brand-300"
+                >
+                  {{ project.github }}
+                </a>
+                <p v-else class="text-right text-slate-600 dark:text-slate-300">
+                  {{ project.github }}
+                </p>
+              </div>
+              <div class="flex items-start justify-between gap-3">
+                <p class="font-semibold text-slate-900 dark:text-slate-100">
+                  {{ projectLabels.demo }}
+                </p>
+                <a
+                  v-if="isExternalLink(project.demo)"
+                  :href="project.demo"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text-brand-700 hover:underline dark:text-brand-300"
+                >
+                  {{ project.demo }}
+                </a>
+                <p v-else class="text-right text-slate-600 dark:text-slate-300">
+                  {{ project.demo }}
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -429,6 +558,28 @@ type EducationEntry = {
   summary: string
 }
 
+type ProjectEntry = {
+  title: string
+  status: string
+  thumbnail: string
+  description: string
+  role: string
+  techStack: string[]
+  challenges: string[]
+  achievements: string[]
+  github: string
+  demo: string
+}
+
+type ProjectLabels = {
+  myRole: string
+  techStack: string
+  challenges: string
+  achievements: string
+  github: string
+  demo: string
+}
+
 const { t, tm, locale } = useI18n()
 const route = useRoute()
 
@@ -438,6 +589,11 @@ const careerTimeline = computed(() => tm('career.timeline') as CareerEntry[])
 const careerLabels = computed(() => tm('career.labels') as CareerLabels)
 const skillsCategories = computed(() => tm('skills.categories') as SkillsCategory[])
 const educationEntry = computed(() => tm('education.entry') as EducationEntry)
+const projects = computed(() => tm('projects.items') as ProjectEntry[])
+const projectLabels = computed(() => tm('projects.labels') as ProjectLabels)
+
+const isExternalLink = (value: string) =>
+  value.startsWith('http://') || value.startsWith('https://')
 
 watch(
   currentLocale,
