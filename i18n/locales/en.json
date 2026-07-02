@@ -71,7 +71,7 @@
     "philosophy": {
       "label": "Philosophy",
       "value": "Build systems, not heroes.",
-      "description": "Great software should be sustainable, observable, and easy for a team to evolve together over time."
+      "description": "Great software is not measured by how much one engineer can build, but by how well a team can sustain, evolve, and improve it over time.\n\nI believe technology should solve business problems—not become the problem itself. That's why I encourage engineers to stay technology-agnostic, embrace continuous learning, and choose the right tools for each challenge.\n\nMy mission is to build scalable platforms, grow adaptable engineering teams, and create systems that continue delivering value long after their original authors have moved on."
     },
     "funFact": {
       "label": "Fun Fact",

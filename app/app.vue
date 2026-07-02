@@ -171,7 +171,9 @@
             <p class="mt-2 text-lg font-semibold text-slate-900 dark:text-slate-50">
               {{ t('about.philosophy.value') }}
             </p>
-            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+            <p
+              class="mt-2 whitespace-pre-line text-sm leading-6 text-slate-600 dark:text-slate-300"
+            >
               {{ t('about.philosophy.description') }}
             </p>
           </article>
@@ -248,7 +250,7 @@ const experienceYears = computed(() => {
   return years
 })
 
-const cvUrl = '/cv/DANIEL-YOSEP-CV-2026-v2.pdf'
+const cvUrl = '/cv/DANIEL-YOSEP-CV-2026-v3.pdf'
 const githubUrl = 'https://github.com/aldanielyosep'
 const linkedinUrl = 'https://www.linkedin.com/in/aldanielyosep'
 const emailUrl = 'mailto:aldanielyosep@gmail.com'

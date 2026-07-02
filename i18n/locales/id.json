@@ -71,7 +71,7 @@
     "philosophy": {
       "label": "Philosophy",
       "value": "Build systems, not heroes.",
-      "description": "Software yang hebat harus berkelanjutan, mudah diamati, dan mudah dikembangkan bersama oleh tim dari waktu ke waktu."
+      "description": "Perangkat lunak yang hebat bukan diukur dari seberapa banyak yang dapat dibangun oleh satu orang, tetapi dari seberapa baik sebuah tim dapat memelihara, mengembangkan, dan terus menyempurnakannya seiring waktu.\n\nSaya percaya bahwa teknologi harus digunakan untuk menyelesaikan masalah bisnis, bukan menjadi masalah itu sendiri. Karena itu, saya mendorong engineer untuk terus belajar, tidak terpaku pada satu bahasa pemrograman atau framework, dan selalu memilih teknologi yang paling tepat untuk setiap tantangan.\n\nMisi saya adalah membangun platform yang skalabel, mengembangkan tim engineering yang adaptif, serta menciptakan sistem yang tetap memberikan nilai bagi bisnis bahkan ketika orang-orang yang membangunnya sudah tidak lagi berada di dalam tim."
     },
     "funFact": {
       "label": "Fun Fact",
