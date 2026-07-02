@@ -22,6 +22,9 @@
     "nav": {
       "home": "Beranda",
       "about": "Tentang",
+      "career": "Karier",
+      "skills": "Keahlian",
+      "education": "Pendidikan",
       "projects": "Proyek",
       "contact": "Kontak"
     },
@@ -77,6 +80,187 @@
       "label": "Fun Fact",
       "value": "Pecinta kopi",
       "description": "Saya senang mengeksplorasi espresso brewing dan seni di balik secangkir kopi yang baik."
+    }
+  },
+  "career": {
+    "kicker": "Perjalanan Karier",
+    "title": "Peran, platform, dan tim yang saya bentuk selama lebih dari satu dekade",
+    "summary": "Dari eksekusi backend secara langsung hingga engineering management, setiap peran memperluas cakupan saya di platform telekomunikasi, asuransi, dan retail dengan fokus yang sama: sistem yang andal dan eksekusi yang praktis.",
+    "labels": {
+      "responsibilities": "Tanggung Jawab",
+      "achievements": "Highlight",
+      "techStack": "Teknologi"
+    },
+    "timeline": [
+      {
+        "company": "PT Toys Game Indonesia (Kawan Lama Group)",
+        "role": "Engineering Manager",
+        "startDate": "Maret 2023",
+        "endDate": "Sekarang",
+        "overview": "Memimpin modernisasi platform enterprise di enam unit bisnis, dengan cakupan leadership, arsitektur platform, dan delivery governance untuk operasional retail berskala nasional.",
+        "responsibilities": [
+          "Memimpin tim lintas fungsi yang terdiri dari backend engineer dan frontend engineer di berbagai platform retail.",
+          "Bertanggung jawab atas hiring, architecture planning, sprint planning, release governance, performance review, dan stakeholder management.",
+          "Mendorong engineer untuk fokus pada penyelesaian masalah bisnis secara technology-agnostic dengan delivery discipline yang kuat."
+        ],
+        "achievements": [
+          "Memimpin Project Ganesha, platform enterprise AI yang dibangun di atas LibreChat, Gemini, Bedrock PoC, Chainlit PoC, dan Keycloak SSO.",
+          "Merancang platform retail dan inventory yang mendukung 2.510 toko, 12.587 pengguna internal, dan sinkronisasi 18-22 juta record per hari.",
+          "Menghasilkan efisiensi biaya dan penurunan risiko melalui modernisasi observability, perubahan infrastruktur, dan desain platform cycle count."
+        ],
+        "stack": [
+          "Ruby on Rails",
+          ".NET",
+          "PostgreSQL",
+          "SQL Server",
+          "Redpanda",
+          "Docker Swarm",
+          "LibreChat",
+          "Gemini",
+          "Keycloak",
+          "GitHub Actions",
+          "SigNoz"
+        ]
+      },
+      {
+        "company": "PT Ignite Service Indonesia (Roojai)",
+        "role": "Tech Lead Engineer",
+        "startDate": "Oktober 2021",
+        "endDate": "Februari 2023",
+        "overview": "Bergabung di fase awal untuk membantu membangun tim engineering Roojai di Indonesia, sambil mengembangkan produk asuransi digital, pricing capability, dan fondasi integrasi utama.",
+        "responsibilities": [
+          "Memimpin tim product engineering kecil yang mencakup delivery backend dan frontend.",
+          "Menetapkan keputusan arsitektur dan standar engineering pada fase awal pertumbuhan tim Indonesia.",
+          "Membangun alur asuransi digital dan mengoordinasikan integrasi lintas sistem."
+        ],
+        "achievements": [
+          "Membangun platform registrasi asuransi digital menggunakan Vue.js dan Node.js.",
+          "Merancang dan mengimplementasikan Radar Pricing Engine untuk quotation, risk assessment, dan premium pricing.",
+          "Mengintegrasikan Salesforce, layanan Sompo TPA, dan payment gateway Xendit ke dalam platform."
+        ],
+        "stack": ["Vue.js", "Node.js", "Java", "Salesforce OData", "Xendit"]
+      },
+      {
+        "company": "PT Supra Primatama Nusantara (Biznet)",
+        "role": "Software Engineer -> Supervisor Software Engineer -> Engineering Manager",
+        "startDate": "Juli 2015",
+        "endDate": "September 2021",
+        "overview": "Bertumbuh dari individual contributor menjadi engineering manager sambil memimpin transformasi digital di area billing, finance, payment, OSS, HR, warehouse, dan customer platform.",
+        "responsibilities": [
+          "Memimpin tim lintas fungsi yang mencakup backend, frontend, mobile, dan QA.",
+          "Berkolaborasi erat dengan stakeholder dari finance, HR, sales, network, customer service, dan infrastructure.",
+          "Memegang tanggung jawab untuk architecture planning, hiring, release governance, incident management, dan technical mentoring."
+        ],
+        "achievements": [
+          "Merancang enterprise payment platform yang memproses sekitar 10.000-12.000 transaksi per hari melalui 13+ kanal pembayaran.",
+          "Membangun OSS auto-provisioning dan berbagai platform enterprise untuk finance, HR, dan warehouse operations.",
+          "Memodernisasi delivery engineering melalui Jenkins CI/CD, containerization, ETL automation, serta integrasi enterprise dengan SAP dan Amdocs."
+        ],
+        "stack": [
+          "Java",
+          "PHP",
+          "Perl",
+          "Bash",
+          "SQL Server",
+          "MySQL",
+          "Jenkins",
+          "Docker",
+          "Pentaho",
+          "SAP",
+          "Amdocs"
+        ]
+      },
+      {
+        "company": "PT Putra Damai Solusindo",
+        "role": "Software Engineering Intern",
+        "startDate": "April 2014",
+        "endDate": "Juli 2014",
+        "overview": "Memulai dari sistem bisnis internal dengan fokus pada reporting, payroll, performa database, dan pemindahan business logic ke application layer.",
+        "responsibilities": [
+          "Membangun fitur reporting internal dan payroll untuk kebutuhan operasional bisnis.",
+          "Bekerja langsung dengan query SQL dan sistem yang sangat bergantung pada stored procedure.",
+          "Mendukung maintenance dan optimasi awal pada aplikasi internal perusahaan."
+        ],
+        "achievements": [
+          "Mengembangkan POS reporting system menggunakan C#.",
+          "Berkontribusi pada payroll management system serta peningkatan performa query.",
+          "Membantu memigrasikan business logic dari SQL Server stored procedures ke application code."
+        ],
+        "stack": ["C#", ".NET", "SQL Server"]
+      }
+    ]
+  },
+  "skills": {
+    "kicker": "Kekuatan Teknis",
+    "title": "Kombinasi skill engineering yang dibentuk dari delivery enterprise",
+    "summary": "Pengalaman saya mencakup backend system, platform architecture, integrasi, observability, dan engineering leadership. Kelompok skill ini merangkum tools dan praktik yang saya gunakan di platform telekomunikasi, asuransi, retail, dan inisiatif AI.",
+    "categories": [
+      {
+        "title": "Backend",
+        "description": "Pengalaman implementasi backend secara langsung untuk enterprise system, integrasi, pricing engine, dan platform services.",
+        "items": ["Ruby on Rails", ".NET", "C#", "Node.js", "Java", "PHP", "Perl", "Bash", "SQL"]
+      },
+      {
+        "title": "Frontend",
+        "description": "Pengalaman membangun antarmuka web untuk produk digital dan workflow internal enterprise, terutama dengan ekosistem Vue.",
+        "items": ["Vue.js", "JavaScript"]
+      },
+      {
+        "title": "Database",
+        "description": "Merancang dan mengelola data layer transaksional maupun operasional untuk platform enterprise dan tooling internal.",
+        "items": ["PostgreSQL", "SQL Server", "MySQL", "Redis"]
+      },
+      {
+        "title": "Infrastructure",
+        "description": "Pipeline delivery, platform container, observability, dan operational practices untuk sistem yang kritikal bagi bisnis.",
+        "items": [
+          "Docker",
+          "Docker Swarm",
+          "GitHub Actions",
+          "Jenkins",
+          "Linux",
+          "SigNoz",
+          "OpenTelemetry",
+          "New Relic"
+        ]
+      },
+      {
+        "title": "Architecture",
+        "description": "Pola desain platform dan pendekatan integrasi yang saya gunakan untuk membangun sistem yang scalable, resilient, dan maintainable.",
+        "items": [
+          "REST API",
+          "Distributed Systems",
+          "Event-Driven Architecture",
+          "Kafka",
+          "Redpanda",
+          "Enterprise Integration",
+          "Platform Modernization"
+        ]
+      },
+      {
+        "title": "Leadership",
+        "description": "Praktik leadership engineering yang berfokus pada pertumbuhan tim, kejelasan delivery, hiring, dan pengambilan keputusan arsitektur.",
+        "items": [
+          "Engineering Management",
+          "Technical Leadership",
+          "Mentoring",
+          "Hiring",
+          "Architecture Governance",
+          "Stakeholder Management"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "kicker": "Pendidikan",
+    "title": "Fondasi akademik di bidang ilmu komputer",
+    "summary": "Pendidikan formal saya membangun dasar teknis yang mendukung pekerjaan saya di software engineering, systems thinking, dan platform architecture.",
+    "entry": {
+      "institution": "Bina Nusantara University (BINUS)",
+      "degree": "Sarjana (S1)",
+      "major": "Ilmu Komputer",
+      "graduationYear": "Lulus 2015",
+      "summary": "Menyelesaikan studi sarjana ilmu komputer di BINUS sebagai fondasi untuk karier profesional saya di software engineering dan enterprise systems."
     }
   }
 }

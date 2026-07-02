@@ -107,7 +107,9 @@ const currentLocale = computed(() => (route.path.startsWith('/id') ? 'id' : 'en'
 const links = computed(() => [
   { label: t('layout.nav.home'), href: '#home' },
   { label: t('layout.nav.about'), href: '#about' },
+  { label: t('layout.nav.career'), href: '#career' },
+  { label: t('layout.nav.skills'), href: '#skills' },
+  { label: t('layout.nav.education'), href: '#education' },
   { label: t('layout.nav.projects'), href: '#projects' },
-  { label: t('layout.nav.contact'), href: '#contact' },
 ])
 </script>

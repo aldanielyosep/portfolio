@@ -93,6 +93,7 @@
           </div>
 
           <div class="mx-auto w-full max-w-xs lg:mx-0">
+            <!-- eslint-disable vue/html-self-closing -->
             <img
               :src="profilePhoto"
               :alt="t('home.hero.photoAlt')"
@@ -100,6 +101,7 @@
               height="512"
               class="aspect-square w-full rounded-3xl border border-slate-200 object-cover shadow-xl dark:border-slate-800"
             />
+            <!-- eslint-enable vue/html-self-closing -->
           </div>
         </div>
       </section>
@@ -194,17 +196,196 @@
         </div>
       </section>
 
+      <section id="career" class="scroll-mt-28 py-14">
+        <div class="mb-8 max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700 dark:text-brand-300"
+          >
+            {{ t('career.kicker') }}
+          </p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+            {{ t('career.title') }}
+          </h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">
+            {{ t('career.summary') }}
+          </p>
+        </div>
+
+        <div
+          class="relative space-y-6 before:absolute before:bottom-8 before:left-4 before:top-8 before:w-px before:bg-slate-200 dark:before:bg-slate-800"
+        >
+          <article
+            v-for="item in careerTimeline"
+            :key="`${item.company}-${item.startDate}`"
+            class="relative pl-10"
+          >
+            <span
+              class="absolute left-0 top-8 flex size-8 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950"
+            >
+              <Icon name="i-lucide-briefcase-business" class="size-4" />
+            </span>
+
+            <div
+              class="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/60"
+            >
+              <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p
+                    class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-300"
+                  >
+                    {{ item.company }}
+                  </p>
+                  <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-slate-50">
+                    {{ item.role }}
+                  </h3>
+                </div>
+
+                <div
+                  class="shrink-0 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                >
+                  {{ item.startDate }} - {{ item.endDate }}
+                </div>
+              </div>
+
+              <p class="mt-4 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+                {{ item.overview }}
+              </p>
+
+              <div class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_18rem]">
+                <div>
+                  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {{ careerLabels.responsibilities }}
+                  </p>
+                  <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    <li v-for="responsibility in item.responsibilities" :key="responsibility">
+                      {{ responsibility }}
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {{ careerLabels.achievements }}
+                  </p>
+                  <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                    <li v-for="achievement in item.achievements" :key="achievement">
+                      {{ achievement }}
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="text-sm font-semibold text-slate-900 dark:text-slate-100">
+                    {{ careerLabels.techStack }}
+                  </p>
+                  <div class="mt-3 flex flex-wrap gap-2">
+                    <span
+                      v-for="technology in item.stack"
+                      :key="technology"
+                      class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+                    >
+                      {{ technology }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="scroll-mt-28 py-14">
+        <div class="mb-8 max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700 dark:text-brand-300"
+          >
+            {{ t('skills.kicker') }}
+          </p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+            {{ t('skills.title') }}
+          </h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">
+            {{ t('skills.summary') }}
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <article
+            v-for="category in skillsCategories"
+            :key="category.title"
+            class="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/60"
+          >
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-300"
+            >
+              {{ category.title }}
+            </p>
+            <p class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+              {{ category.description }}
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span
+                v-for="item in category.items"
+                :key="item"
+                class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+              >
+                {{ item }}
+              </span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="scroll-mt-28 py-14">
+        <div class="mb-8 max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-700 dark:text-brand-300"
+          >
+            {{ t('education.kicker') }}
+          </p>
+          <h2 class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+            {{ t('education.title') }}
+          </h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">
+            {{ t('education.summary') }}
+          </p>
+        </div>
+
+        <article
+          class="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/60"
+        >
+          <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div>
+              <p
+                class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700 dark:text-brand-300"
+              >
+                {{ educationEntry.institution }}
+              </p>
+              <h3 class="mt-2 text-xl font-semibold text-slate-900 dark:text-slate-50">
+                {{ educationEntry.degree }}
+              </h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                {{ educationEntry.major }}
+              </p>
+            </div>
+
+            <div
+              class="shrink-0 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+            >
+              {{ educationEntry.graduationYear }}
+            </div>
+          </div>
+
+          <p class="mt-4 max-w-3xl text-sm leading-6 text-slate-600 dark:text-slate-300">
+            {{ educationEntry.summary }}
+          </p>
+        </article>
+      </section>
+
       <section id="projects" class="scroll-mt-28 py-14">
         <h2 class="text-2xl font-semibold">{{ t('layout.nav.projects') }}</h2>
         <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
           {{ t('layout.placeholder.projects') }}
-        </p>
-      </section>
-
-      <section id="contact" class="scroll-mt-28 py-14">
-        <h2 class="text-2xl font-semibold">{{ t('layout.nav.contact') }}</h2>
-        <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
-          {{ t('layout.placeholder.contact') }}
         </p>
       </section>
     </main>
@@ -217,10 +398,46 @@
 <script setup lang="ts">
 import profilePhoto from '../assets/images/pp-daniel.jpeg'
 
-const { t, locale } = useI18n()
+type CareerEntry = {
+  company: string
+  role: string
+  startDate: string
+  endDate: string
+  overview: string
+  responsibilities: string[]
+  achievements: string[]
+  stack: string[]
+}
+
+type CareerLabels = {
+  responsibilities: string
+  achievements: string
+  techStack: string
+}
+
+type SkillsCategory = {
+  title: string
+  description: string
+  items: string[]
+}
+
+type EducationEntry = {
+  institution: string
+  degree: string
+  major: string
+  graduationYear: string
+  summary: string
+}
+
+const { t, tm, locale } = useI18n()
 const route = useRoute()
 
 const currentLocale = computed(() => (route.path.startsWith('/id') ? 'id' : 'en'))
+
+const careerTimeline = computed(() => tm('career.timeline') as CareerEntry[])
+const careerLabels = computed(() => tm('career.labels') as CareerLabels)
+const skillsCategories = computed(() => tm('skills.categories') as SkillsCategory[])
+const educationEntry = computed(() => tm('education.entry') as EducationEntry)
 
 watch(
   currentLocale,

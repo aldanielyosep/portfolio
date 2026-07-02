@@ -22,6 +22,9 @@
     "nav": {
       "home": "Home",
       "about": "About",
+      "career": "Career",
+      "skills": "Skills",
+      "education": "Education",
       "projects": "Projects",
       "contact": "Contact"
     },
@@ -77,6 +80,187 @@
       "label": "Fun Fact",
       "value": "Coffee enthusiast",
       "description": "I enjoy exploring espresso brewing and the craft behind a good cup of coffee."
+    }
+  },
+  "career": {
+    "kicker": "Career Journey",
+    "title": "Roles, platforms, and teams shaped across a decade",
+    "summary": "From hands-on backend delivery to engineering management, each role expanded my scope across telecom, insurance, and retail platforms while keeping the focus on reliable systems and practical execution.",
+    "labels": {
+      "responsibilities": "Responsibilities",
+      "achievements": "Highlights",
+      "techStack": "Tech Stack"
+    },
+    "timeline": [
+      {
+        "company": "PT Toys Game Indonesia (Kawan Lama Group)",
+        "role": "Engineering Manager",
+        "startDate": "March 2023",
+        "endDate": "Present",
+        "overview": "Lead enterprise platform modernization across six business units, balancing engineering leadership, platform architecture, and delivery governance for nationwide retail operations.",
+        "responsibilities": [
+          "Lead a cross-functional team of backend and frontend engineers across multiple retail platforms.",
+          "Own hiring, architecture planning, sprint planning, release governance, performance reviews, and stakeholder management.",
+          "Guide engineers toward technology-agnostic problem solving and stronger delivery discipline."
+        ],
+        "achievements": [
+          "Led Project Ganesha, an enterprise AI platform built around LibreChat, Gemini, Bedrock PoCs, Chainlit PoCs, and Keycloak SSO.",
+          "Architected retail and inventory platforms supporting 2,510 stores, 12,587 internal users, and 18-22 million synchronized records per day.",
+          "Delivered major cost and risk reductions through observability modernization, infrastructure changes, and cycle count platform design."
+        ],
+        "stack": [
+          "Ruby on Rails",
+          ".NET",
+          "PostgreSQL",
+          "SQL Server",
+          "Redpanda",
+          "Docker Swarm",
+          "LibreChat",
+          "Gemini",
+          "Keycloak",
+          "GitHub Actions",
+          "SigNoz"
+        ]
+      },
+      {
+        "company": "PT Ignite Service Indonesia (Roojai)",
+        "role": "Tech Lead Engineer",
+        "startDate": "October 2021",
+        "endDate": "February 2023",
+        "overview": "Joined early to help establish Roojai's engineering team in Indonesia, building insurance products, core pricing capabilities, and integration foundations.",
+        "responsibilities": [
+          "Led a small product engineering team spanning backend and frontend delivery.",
+          "Defined architecture and engineering standards during the early growth phase of the Indonesia team.",
+          "Built digital insurance flows and coordinated cross-system integrations."
+        ],
+        "achievements": [
+          "Built a digital insurance registration platform using Vue.js and Node.js.",
+          "Designed and implemented the Radar Pricing Engine for quotations, risk assessment, and premium pricing.",
+          "Integrated Salesforce, Sompo TPA services, and Xendit payment capabilities into the platform."
+        ],
+        "stack": ["Vue.js", "Node.js", "Java", "Salesforce OData", "Xendit"]
+      },
+      {
+        "company": "PT Supra Primatama Nusantara (Biznet)",
+        "role": "Software Engineer -> Supervisor Software Engineer -> Engineering Manager",
+        "startDate": "July 2015",
+        "endDate": "September 2021",
+        "overview": "Progressed from individual contributor to engineering manager while leading digital transformation across billing, finance, payment, OSS, HR, warehouse, and customer platforms.",
+        "responsibilities": [
+          "Led a cross-functional team covering backend, frontend, mobile, and QA delivery.",
+          "Worked closely with finance, HR, sales, network, customer service, and infrastructure stakeholders.",
+          "Owned architecture planning, hiring, release governance, incident management, and technical mentoring."
+        ],
+        "achievements": [
+          "Architected an enterprise payment platform processing around 10,000-12,000 transactions per day across 13+ payment channels.",
+          "Delivered OSS auto-provisioning and multiple enterprise platforms for finance, HR, and warehouse operations.",
+          "Modernized software delivery through Jenkins CI/CD, containerization, ETL automation, and enterprise integrations with SAP and Amdocs."
+        ],
+        "stack": [
+          "Java",
+          "PHP",
+          "Perl",
+          "Bash",
+          "SQL Server",
+          "MySQL",
+          "Jenkins",
+          "Docker",
+          "Pentaho",
+          "SAP",
+          "Amdocs"
+        ]
+      },
+      {
+        "company": "PT Putra Damai Solusindo",
+        "role": "Software Engineering Intern",
+        "startDate": "April 2014",
+        "endDate": "July 2014",
+        "overview": "Started with internal business systems work, focusing on reporting, payroll, database performance, and moving business logic closer to application code.",
+        "responsibilities": [
+          "Built internal reporting and payroll features for business operations.",
+          "Worked directly with SQL queries and stored procedure heavy systems.",
+          "Supported early maintenance and optimization work across internal applications."
+        ],
+        "achievements": [
+          "Developed a POS reporting system using C#.",
+          "Contributed to a payroll management system and query performance improvements.",
+          "Helped migrate business logic from SQL Server stored procedures into application code."
+        ],
+        "stack": ["C#", ".NET", "SQL Server"]
+      }
+    ]
+  },
+  "skills": {
+    "kicker": "Technical Strengths",
+    "title": "A broad engineering toolkit shaped by enterprise delivery",
+    "summary": "My experience spans backend systems, platform architecture, integrations, observability, and engineering leadership. These skill groups reflect the tools and practices I have applied across telecom, insurance, retail, and AI platform work.",
+    "categories": [
+      {
+        "title": "Backend",
+        "description": "Hands-on backend implementation across enterprise systems, integrations, pricing engines, and platform services.",
+        "items": ["Ruby on Rails", ".NET", "C#", "Node.js", "Java", "PHP", "Perl", "Bash", "SQL"]
+      },
+      {
+        "title": "Frontend",
+        "description": "Product-facing web interfaces for insurance and internal enterprise workflows, with Vue-based implementation experience.",
+        "items": ["Vue.js", "JavaScript"]
+      },
+      {
+        "title": "Database",
+        "description": "Designing and operating transactional and operational data layers for enterprise platforms and internal tooling.",
+        "items": ["PostgreSQL", "SQL Server", "MySQL", "Redis"]
+      },
+      {
+        "title": "Infrastructure",
+        "description": "Delivery pipelines, container platforms, observability, and production operations for business-critical systems.",
+        "items": [
+          "Docker",
+          "Docker Swarm",
+          "GitHub Actions",
+          "Jenkins",
+          "Linux",
+          "SigNoz",
+          "OpenTelemetry",
+          "New Relic"
+        ]
+      },
+      {
+        "title": "Architecture",
+        "description": "Platform design patterns and integration approaches used to build scalable, resilient, and maintainable systems.",
+        "items": [
+          "REST API",
+          "Distributed Systems",
+          "Event-Driven Architecture",
+          "Kafka",
+          "Redpanda",
+          "Enterprise Integration",
+          "Platform Modernization"
+        ]
+      },
+      {
+        "title": "Leadership",
+        "description": "Engineering leadership practices focused on team growth, delivery clarity, hiring, and architecture decision-making.",
+        "items": [
+          "Engineering Management",
+          "Technical Leadership",
+          "Mentoring",
+          "Hiring",
+          "Architecture Governance",
+          "Stakeholder Management"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "kicker": "Education",
+    "title": "Academic foundation in computer science",
+    "summary": "My formal education established the technical fundamentals that support my work in software engineering, systems thinking, and platform architecture.",
+    "entry": {
+      "institution": "Bina Nusantara University (BINUS)",
+      "degree": "Bachelor's Degree (S1)",
+      "major": "Computer Science",
+      "graduationYear": "Graduated 2015",
+      "summary": "Completed undergraduate study in computer science at BINUS, building the foundation for professional work in software engineering and enterprise systems."
     }
   }
 }
