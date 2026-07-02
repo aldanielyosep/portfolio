@@ -150,6 +150,27 @@ Every push and pull request automatically runs the following checks:
 - Prettier format validation
 - Production build
 
+### Cloudflare Auto Deploy
+
+This repository includes a deployment workflow at
+`.github/workflows/deploy-cf-pages.yml`.
+
+On every push to `main`, GitHub Actions will:
+
+1. Install dependencies
+2. Generate static output via `npm run generate`
+3. Deploy `.output/public` to Cloudflare Pages project `portfolio`
+
+Required GitHub repository secrets:
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+Recommended API token permissions:
+
+- `Cloudflare Pages:Edit`
+- `Account:Read`
+
 ---
 
 ## 📈 Roadmap

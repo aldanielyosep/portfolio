@@ -6,7 +6,7 @@
     "toggleTheme": "Toggle theme"
   },
   "layout": {
-    "phaseReady": "Phase 4 layout is live",
+    "phaseReady": "",
     "menu": "Menu",
     "openMenu": "Open navigation menu",
     "closeMenu": "Close navigation menu",
@@ -25,8 +25,7 @@
       "career": "Career",
       "skills": "Skills",
       "education": "Education",
-      "projects": "Projects",
-      "contact": "Contact"
+      "projects": "Projects"
     },
     "footer": {
       "tagline": "Engineering thoughtful digital products."
@@ -38,7 +37,7 @@
     }
   },
   "home": {
-    "phaseReady": "Phase 5 home is in progress",
+    "phaseReady": "",
     "hero": {
       "name": "Daniel Yosep",
       "title": "Engineering Manager and Software Architect",
