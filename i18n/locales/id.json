@@ -6,7 +6,7 @@
     "toggleTheme": "Ubah tema"
   },
   "layout": {
-    "phaseReady": "Layout Phase 4 sudah aktif",
+    "phaseReady": "",
     "menu": "Menu",
     "openMenu": "Buka menu navigasi",
     "closeMenu": "Tutup menu navigasi",
@@ -38,7 +38,7 @@
     }
   },
   "home": {
-    "phaseReady": "Phase 5 beranda sedang dikerjakan",
+    "phaseReady": "",
     "hero": {
       "name": "Daniel Yosep",
       "title": "Engineering Manager dan Software Architect",
