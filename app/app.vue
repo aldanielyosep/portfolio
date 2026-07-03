@@ -623,7 +623,7 @@ const experienceYears = computed(() => {
   return years
 })
 
-const cvUrl = '/cv/DANIEL-YOSEP-CV-2026-v3.pdf'
+const cvUrl = '/cv/DANIEL-YOSEP-CV-2026-v3.1.pdf'
 const githubUrl = 'https://github.com/aldanielyosep'
 const linkedinUrl = 'https://www.linkedin.com/in/aldanielyosep'
 const emailUrl = 'mailto:aldanielyosep@gmail.com'
