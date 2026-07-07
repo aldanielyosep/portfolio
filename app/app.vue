@@ -31,6 +31,7 @@
                 :href="cvUrl"
                 :download="cvDownloadFilename"
                 class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
+                @click.prevent="downloadCv"
               >
                 <Icon name="i-lucide-file-down" class="size-4" />
                 {{ t('home.hero.actions.downloadCv') }}
@@ -504,6 +505,7 @@
 import AppNavbar from './components/layout/AppNavbar.vue'
 import AppFooter from './components/layout/AppFooter.vue'
 import ScrollToTopButton from './components/common/ScrollToTopButton.vue'
+import cvAssetUrl from '~/assets/files/daniel-yosep-cv-2026-v3.1.pdf?url'
 
 type CareerEntry = {
   company: string
@@ -783,9 +785,33 @@ const experienceYears = computed(() => {
   return years
 })
 
-const cvUrl = '/cv/daniel-yosep-cv-2026-v3.1.pdf'
+const cvUrl = cvAssetUrl
 const cvDownloadFilename = 'daniel-yosep-cv-2026-v3.1.pdf'
 const githubUrl = 'https://github.com/aldanielyosep'
 const linkedinUrl = 'https://www.linkedin.com/in/aldanielyosep'
 const emailUrl = 'mailto:aldanielyosep@gmail.com'
+
+const downloadCv = async () => {
+  try {
+    const response = await fetch(cvUrl, { cache: 'no-store' })
+    const contentType = response.headers.get('content-type') || ''
+
+    if (!response.ok || contentType.includes('text/html')) {
+      window.location.href = cvUrl
+      return
+    }
+
+    const blob = await response.blob()
+    const objectUrl = URL.createObjectURL(blob)
+    const anchor = document.createElement('a')
+    anchor.href = objectUrl
+    anchor.download = cvDownloadFilename
+    document.body.appendChild(anchor)
+    anchor.click()
+    anchor.remove()
+    URL.revokeObjectURL(objectUrl)
+  } catch {
+    window.location.href = cvUrl
+  }
+}
 </script>
