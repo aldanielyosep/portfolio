@@ -629,6 +629,14 @@ useHead({
   ],
 })
 
+const readMessage = (key: string): unknown => {
+  const translateMessage = tm as unknown as (path: string) => unknown
+  return translateMessage(key)
+}
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value)
+
 const toText = (value: unknown) => {
   if (typeof value === 'string') {
     return value
@@ -638,21 +646,22 @@ const toText = (value: unknown) => {
     return ''
   }
 
-  return rt(value)
+  type RtInput = Parameters<typeof rt>[0]
+  return rt(value as RtInput)
 }
 
 const toTextArray = (value: unknown) =>
   Array.isArray(value) ? value.map((item) => toText(item)) : []
 
 const careerTimeline = computed<CareerEntry[]>(() => {
-  const timeline = tm('career.timeline')
+  const timeline = readMessage('career.timeline')
 
   if (!Array.isArray(timeline)) {
     return []
   }
 
-  return timeline.map((entry) => {
-    const item = entry as Record<string, unknown>
+  return timeline.map((entry: unknown) => {
+    const item = isRecord(entry) ? entry : {}
 
     return {
       company: toText(item.company),
@@ -668,7 +677,8 @@ const careerTimeline = computed<CareerEntry[]>(() => {
 })
 
 const careerLabels = computed<CareerLabels>(() => {
-  const labels = tm('career.labels') as Record<string, unknown>
+  const labelsRaw = readMessage('career.labels')
+  const labels = isRecord(labelsRaw) ? labelsRaw : {}
 
   return {
     responsibilities: toText(labels.responsibilities),
@@ -678,14 +688,14 @@ const careerLabels = computed<CareerLabels>(() => {
 })
 
 const skillsCategories = computed<SkillsCategory[]>(() => {
-  const categories = tm('skills.categories')
+  const categories = readMessage('skills.categories')
 
   if (!Array.isArray(categories)) {
     return []
   }
 
-  return categories.map((entry) => {
-    const item = entry as Record<string, unknown>
+  return categories.map((entry: unknown) => {
+    const item = isRecord(entry) ? entry : {}
 
     return {
       title: toText(item.title),
@@ -696,7 +706,8 @@ const skillsCategories = computed<SkillsCategory[]>(() => {
 })
 
 const educationEntry = computed<EducationEntry>(() => {
-  const entry = tm('education.entry') as Record<string, unknown>
+  const entryRaw = readMessage('education.entry')
+  const entry = isRecord(entryRaw) ? entryRaw : {}
 
   return {
     institution: toText(entry.institution),
@@ -708,14 +719,14 @@ const educationEntry = computed<EducationEntry>(() => {
 })
 
 const projects = computed<ProjectEntry[]>(() => {
-  const items = tm('projects.items')
+  const items = readMessage('projects.items')
 
   if (!Array.isArray(items)) {
     return []
   }
 
-  return items.map((entry) => {
-    const item = entry as Record<string, unknown>
+  return items.map((entry: unknown) => {
+    const item = isRecord(entry) ? entry : {}
 
     return {
       title: toText(item.title),
@@ -733,7 +744,8 @@ const projects = computed<ProjectEntry[]>(() => {
 })
 
 const projectLabels = computed<ProjectLabels>(() => {
-  const labels = tm('projects.labels') as Record<string, unknown>
+  const labelsRaw = readMessage('projects.labels')
+  const labels = isRecord(labelsRaw) ? labelsRaw : {}
 
   return {
     myRole: toText(labels.myRole),
