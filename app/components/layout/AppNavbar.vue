@@ -97,9 +97,9 @@
         {{ t('layout.menu') }}
       </button>
     </div>
-
-    <MobileNav :open="isOpen" @close="isOpen = false" />
   </header>
+
+  <MobileNav :open="isOpen" @close="isOpen = false" />
 </template>
 
 <script setup lang="ts">
