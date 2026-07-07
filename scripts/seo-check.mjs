@@ -41,7 +41,10 @@ if (fs.existsSync(indexPath)) {
     ['Alternate hreflang id', /<link[^>]+rel="alternate"[^>]+hreflang="id"[^>]+href="[^"]+/i],
     ['JSON-LD script', /<script[^>]+type="application\/ld\+json"[^>]*>.+<\/script>/is],
     ['Favicon link', /<link[^>]+rel="icon"[^>]+href="\/favicon\.ico"/i],
-    ['Apple touch icon link', /<link[^>]+rel="apple-touch-icon"[^>]+href="\/apple-touch-icon\.png"/i],
+    [
+      'Apple touch icon link',
+      /<link[^>]+rel="apple-touch-icon"[^>]+href="\/apple-touch-icon\.png"/i,
+    ],
   ]
 
   for (const [label, pattern] of htmlChecks) {
@@ -54,7 +57,10 @@ if (fs.existsSync(indexPath)) {
 const robotsPath = path.join(outDir, 'robots.txt')
 if (fs.existsSync(robotsPath)) {
   const robots = fs.readFileSync(robotsPath, 'utf8')
-  addResult(/Sitemap:\s*https?:\/\/[^\s]+\/sitemap_index\.xml/i.test(robots), 'robots.txt: sitemap_index.xml declared')
+  addResult(
+    /Sitemap:\s*https?:\/\/[^\s]+\/sitemap_index\.xml/i.test(robots),
+    'robots.txt: sitemap_index.xml declared',
+  )
 }
 
 const hasFailure = checkResults.some((entry) => !entry.ok)
