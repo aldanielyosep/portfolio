@@ -29,8 +29,7 @@
             <div class="mt-8 flex flex-wrap items-center gap-3">
               <a
                 :href="cvUrl"
-                target="_blank"
-                rel="noreferrer"
+                :download="cvDownloadFilename"
                 class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-700"
               >
                 <Icon name="i-lucide-file-down" class="size-4" />
@@ -785,6 +784,7 @@ const experienceYears = computed(() => {
 })
 
 const cvUrl = '/cv/daniel-yosep-cv-2026-v3.1.pdf'
+const cvDownloadFilename = 'daniel-yosep-cv-2026-v3.1.pdf'
 const githubUrl = 'https://github.com/aldanielyosep'
 const linkedinUrl = 'https://www.linkedin.com/in/aldanielyosep'
 const emailUrl = 'mailto:aldanielyosep@gmail.com'
