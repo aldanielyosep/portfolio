@@ -559,7 +559,75 @@ type ProjectLabels = {
   demo: string
 }
 
-const { t, tm } = useI18n()
+const { t, tm, locale } = useI18n()
+const route = useRoute()
+const switchLocalePath = useSwitchLocalePath()
+const siteConfig = useSiteConfig()
+
+const siteUrl = computed(() => siteConfig.url || 'https://danielyosep.dev')
+const pageTitle = computed(() => t('common.title'))
+const pageDescription = computed(() => t('common.description'))
+const canonicalUrl = computed(() => new URL(route.path || '/', siteUrl.value).toString())
+const localePathEn = computed(() => switchLocalePath('en'))
+const localePathId = computed(() => switchLocalePath('id'))
+const ogImageUrl = computed(() => new URL('/images/pp-daniel.jpeg', siteUrl.value).toString())
+const personJsonLd = computed(() =>
+  JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Daniel Yosep',
+    url: siteUrl.value,
+    image: ogImageUrl.value,
+    jobTitle: t('home.hero.title'),
+    description: pageDescription.value,
+    email: 'mailto:aldanielyosep@gmail.com',
+    sameAs: ['https://github.com/aldanielyosep', 'https://www.linkedin.com/in/aldanielyosep'],
+  }),
+)
+
+useSeoMeta({
+  title: () => pageTitle.value,
+  description: () => pageDescription.value,
+  ogTitle: () => pageTitle.value,
+  ogDescription: () => pageDescription.value,
+  ogType: 'website',
+  ogSiteName: () => pageTitle.value,
+  ogLocale: () => (locale.value === 'id' ? 'id_ID' : 'en_US'),
+  ogImage: () => ogImageUrl.value,
+  ogImageAlt: () => t('home.hero.photoAlt'),
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => pageTitle.value,
+  twitterDescription: () => pageDescription.value,
+  twitterImage: () => ogImageUrl.value,
+})
+
+useHead({
+  htmlAttrs: {
+    lang: () => locale.value,
+  },
+  link: [
+    { rel: 'canonical', href: () => canonicalUrl.value },
+    {
+      rel: 'alternate',
+      hreflang: 'en',
+      href: () => new URL(localePathEn.value, siteUrl.value).toString(),
+    },
+    {
+      rel: 'alternate',
+      hreflang: 'id',
+      href: () => new URL(localePathId.value, siteUrl.value).toString(),
+    },
+    { rel: 'alternate', hreflang: 'x-default', href: () => new URL('/', siteUrl.value).toString() },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      textContent: () => personJsonLd.value,
+    },
+  ],
+})
 
 const careerTimeline = computed(() => tm('career.timeline') as CareerEntry[])
 const careerLabels = computed(() => tm('career.labels') as CareerLabels)
@@ -589,7 +657,7 @@ const experienceYears = computed(() => {
   return years
 })
 
-const cvUrl = '/cv/DANIEL-YOSEP-CV-2026-v3.1.pdf'
+const cvUrl = '/cv/daniel-yosep-cv-2026-v3.1.pdf'
 const githubUrl = 'https://github.com/aldanielyosep'
 const linkedinUrl = 'https://www.linkedin.com/in/aldanielyosep'
 const emailUrl = 'mailto:aldanielyosep@gmail.com'

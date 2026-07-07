@@ -79,4 +79,15 @@ export default defineNuxtConfig({
     description: 'Personal portfolio of Daniel Yosep',
     defaultLocale: 'en',
   },
+  sitemap: {
+    enabled: true,
+  },
+  robots: {
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+  },
 })
