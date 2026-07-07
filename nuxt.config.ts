@@ -29,10 +29,20 @@ export default defineNuxtConfig({
       {
         name: 'Geist',
         provider: 'google',
+        weights: ['400', '500', '600', '700'],
+        styles: ['normal'],
+        subsets: ['latin'],
+        display: 'swap',
+        preload: true,
       },
       {
         name: 'Geist Mono',
         provider: 'google',
+        weights: ['400', '500'],
+        styles: ['normal'],
+        subsets: ['latin'],
+        display: 'swap',
+        preload: false,
       },
     ],
   },
@@ -51,7 +61,16 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    format: ['webp'],
+    format: ['avif', 'webp'],
+    quality: 82,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
   },
   site: {
     url: 'https://danielyosep.dev',

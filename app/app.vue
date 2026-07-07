@@ -65,15 +65,20 @@
           </div>
 
           <div class="mx-auto w-full max-w-xs lg:mx-0">
-            <!-- eslint-disable vue/html-self-closing -->
-            <img
-              :src="profilePhoto"
+            <NuxtImg
+              src="/images/pp-daniel.jpeg"
               :alt="t('home.hero.photoAlt')"
               width="512"
               height="512"
+              sizes="(max-width: 1024px) 320px, 512px"
+              quality="82"
+              format="webp"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              preload
               class="aspect-square w-full rounded-3xl border border-slate-200 object-cover shadow-xl dark:border-slate-800"
             />
-            <!-- eslint-enable vue/html-self-closing -->
           </div>
         </div>
       </section>
@@ -497,7 +502,6 @@
 </template>
 
 <script setup lang="ts">
-import profilePhoto from '../assets/images/pp-daniel.jpeg'
 import AppNavbar from './components/layout/AppNavbar.vue'
 import AppFooter from './components/layout/AppFooter.vue'
 import ScrollToTopButton from './components/common/ScrollToTopButton.vue'
