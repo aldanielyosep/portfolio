@@ -47,7 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "^21.2.0",
     "@commitlint/config-conventional": "^21.2.0",
-    "@iconify-json/lucide": "^1.2.115",
+    "@iconify-json/lucide": "^1.2.116",
     "@tailwindcss/postcss": "^4.3.2",
     "@tailwindcss/vite": "^4.3.2",
     "eslint": "^10.6.0",
