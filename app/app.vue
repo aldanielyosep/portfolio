@@ -1,36 +1,8 @@
 <template>
   <div
-    class="min-h-screen bg-linear-to-b from-brand-50/60 via-white to-white dark:from-slate-900 dark:via-slate-950 dark:to-slate-950"
+    class="min-h-screen bg-linear-to-b from-brand-50/60 via-white to-white text-slate-900 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 dark:text-slate-100"
   >
     <NuxtRouteAnnouncer />
-    <div class="fixed right-4 top-16 z-60 md:right-6 md:top-6">
-      <div
-        class="flex items-center gap-1 rounded-full border border-slate-200/90 bg-white/95 p-1 shadow-lg ring-1 ring-black/5 backdrop-blur dark:border-slate-700 dark:bg-slate-950/90 dark:ring-white/10"
-      >
-        <NuxtLink
-          :to="'/'"
-          class="rounded-full px-3 py-2 text-sm font-semibold transition"
-          :class="
-            currentLocale === 'en'
-              ? 'bg-brand-600 text-white'
-              : 'text-slate-600 hover:text-brand-700 dark:text-slate-300 dark:hover:text-brand-300'
-          "
-        >
-          EN
-        </NuxtLink>
-        <NuxtLink
-          :to="'/id'"
-          class="rounded-full px-3 py-2 text-sm font-semibold transition"
-          :class="
-            currentLocale === 'id'
-              ? 'bg-brand-600 text-white'
-              : 'text-slate-600 hover:text-brand-700 dark:text-slate-300 dark:hover:text-brand-300'
-          "
-        >
-          ID
-        </NuxtLink>
-      </div>
-    </div>
     <AppNavbar />
 
     <main class="mx-auto w-full max-w-6xl px-4 pb-24 pt-12 sm:px-6">
@@ -526,6 +498,9 @@
 
 <script setup lang="ts">
 import profilePhoto from '../assets/images/pp-daniel.jpeg'
+import AppNavbar from './components/layout/AppNavbar.vue'
+import AppFooter from './components/layout/AppFooter.vue'
+import ScrollToTopButton from './components/common/ScrollToTopButton.vue'
 
 type CareerEntry = {
   company: string
@@ -580,10 +555,7 @@ type ProjectLabels = {
   demo: string
 }
 
-const { t, tm, locale } = useI18n()
-const route = useRoute()
-
-const currentLocale = computed(() => (route.path.startsWith('/id') ? 'id' : 'en'))
+const { t, tm } = useI18n()
 
 const careerTimeline = computed(() => tm('career.timeline') as CareerEntry[])
 const careerLabels = computed(() => tm('career.labels') as CareerLabels)
@@ -594,16 +566,6 @@ const projectLabels = computed(() => tm('projects.labels') as ProjectLabels)
 
 const isExternalLink = (value: string) =>
   value.startsWith('http://') || value.startsWith('https://')
-
-watch(
-  currentLocale,
-  (nextLocale) => {
-    if (locale.value !== nextLocale) {
-      locale.value = nextLocale
-    }
-  },
-  { immediate: true },
-)
 
 const experienceStartDate = new Date(2015, 6, 1)
 

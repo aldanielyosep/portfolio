@@ -8,6 +8,7 @@
       <div>
         <p class="text-sm font-semibold">Daniel Yosep</p>
         <p class="text-sm text-slate-600 dark:text-slate-300">{{ t('layout.footer.tagline') }}</p>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">{{ copyrightText }}</p>
       </div>
 
       <div class="flex items-center gap-4 text-sm">
@@ -34,4 +35,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+
+const copyrightText = computed(() => `© ${new Date().getFullYear()} Daniel Yosep`)
 </script>

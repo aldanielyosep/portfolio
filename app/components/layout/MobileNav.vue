@@ -55,32 +55,34 @@
             <div
               class="flex items-center gap-1 rounded-full border border-slate-300/80 bg-white/80 p-1 dark:border-slate-700 dark:bg-slate-900/60"
             >
-              <NuxtLink
-                :to="switchLocalePath('en')"
+              <button
+                type="button"
                 class="rounded-full px-3 py-2 text-sm font-semibold transition"
                 :class="
                   currentLocale === 'en'
                     ? 'bg-brand-600 text-white'
                     : 'text-slate-600 hover:text-brand-700 dark:text-slate-300 dark:hover:text-brand-300'
                 "
-                @click="$emit('close')"
+                @click="handleLocaleChange('en')"
               >
                 EN
-              </NuxtLink>
-              <NuxtLink
-                :to="switchLocalePath('id')"
+              </button>
+              <button
+                type="button"
                 class="rounded-full px-3 py-2 text-sm font-semibold transition"
                 :class="
                   currentLocale === 'id'
                     ? 'bg-brand-600 text-white'
                     : 'text-slate-600 hover:text-brand-700 dark:text-slate-300 dark:hover:text-brand-300'
                 "
-                @click="$emit('close')"
+                @click="handleLocaleChange('id')"
               >
                 ID
-              </NuxtLink>
+              </button>
             </div>
-            <ThemeSwitcher />
+            <ClientOnly>
+              <ThemeSwitcher />
+            </ClientOnly>
           </div>
         </aside>
       </Transition>
@@ -89,17 +91,17 @@
 </template>
 
 <script setup lang="ts">
+import ThemeSwitcher from '../common/ThemeSwitcher.vue'
+
 defineProps<{
   open: boolean
 }>()
 
-defineEmits<{
+const emit = defineEmits<{
   close: []
 }>()
 
-const { t } = useI18n()
-const route = useRoute()
-const switchLocalePath = useSwitchLocalePath()
+const { t, locale, setLocale } = useI18n()
 
 const links = computed(() => [
   { label: t('layout.nav.home'), href: '#home' },
@@ -110,5 +112,13 @@ const links = computed(() => [
   { label: t('layout.nav.projects'), href: '#projects' },
 ])
 
-const currentLocale = computed(() => (route.path.startsWith('/id') ? 'id' : 'en'))
+const currentLocale = computed(() => locale.value)
+
+const handleLocaleChange = async (nextLocale: 'en' | 'id') => {
+  if (locale.value !== nextLocale) {
+    await setLocale(nextLocale)
+  }
+
+  emit('close')
+}
 </script>

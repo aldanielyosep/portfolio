@@ -1,7 +1,22 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #d9ebff;
+  --color-brand-200: #bcdcff;
+  --color-brand-300: #8fc5ff;
+  --color-brand-400: #5da5ff;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+}
+
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
 body {
@@ -20,7 +35,20 @@ body {
     color 200ms;
 }
 
-.dark body {
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
   background: rgb(2 6 23);
   color: rgb(248 250 252);
+}
+
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background: white;
+  color: rgb(15 23 42);
 }
