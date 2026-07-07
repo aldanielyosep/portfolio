@@ -88,6 +88,7 @@ http://localhost:3000
 | `npm run format`       | Format source code           |
 | `npm run format:check` | Check formatting             |
 | `npm run typecheck`    | Run TypeScript type checking |
+| `npm run seo:check`    | Build and validate SEO setup |
 
 ---
 

@@ -13,6 +13,7 @@
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "typecheck": "nuxt typecheck",
+    "seo:check": "npm run generate && node scripts/seo-check.mjs",
     "perf:lighthouse:desktop": "mkdir -p .lighthouse && CHROME_PATH=\"$(find ./.cache/puppeteer/chrome -type f -path '*Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing' | head -n 1)\" npx lighthouse http://localhost:3000 --preset=desktop --only-categories=performance --output=html --output-path=.lighthouse/desktop.html --chrome-flags='--headless=new --no-sandbox' --no-enable-error-reporting",
     "perf:lighthouse:mobile": "mkdir -p .lighthouse && CHROME_PATH=\"$(find ./.cache/puppeteer/chrome -type f -path '*Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing' | head -n 1)\" npx lighthouse http://localhost:3000 --only-categories=performance --form-factor=mobile --screenEmulation.mobile=true --throttling-method=simulate --output=html --output-path=.lighthouse/mobile.html --chrome-flags='--headless=new --no-sandbox' --no-enable-error-reporting",
     "prepare": "husky"
