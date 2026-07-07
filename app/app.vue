@@ -559,7 +559,7 @@ type ProjectLabels = {
   demo: string
 }
 
-const { t, tm, locale } = useI18n()
+const { t, tm, rt, locale } = useI18n()
 const route = useRoute()
 const switchLocalePath = useSwitchLocalePath()
 const siteConfig = useSiteConfig()
@@ -629,15 +629,130 @@ useHead({
   ],
 })
 
-const careerTimeline = computed(() => tm('career.timeline') as CareerEntry[])
-const careerLabels = computed(() => tm('career.labels') as CareerLabels)
-const skillsCategories = computed(() => tm('skills.categories') as SkillsCategory[])
-const educationEntry = computed(() => tm('education.entry') as EducationEntry)
-const projects = computed(() => tm('projects.items') as ProjectEntry[])
-const projectLabels = computed(() => tm('projects.labels') as ProjectLabels)
+const toText = (value: unknown) => {
+  if (typeof value === 'string') {
+    return value
+  }
 
-const isExternalLink = (value: string) =>
-  value.startsWith('http://') || value.startsWith('https://')
+  if (value == null) {
+    return ''
+  }
+
+  return rt(value)
+}
+
+const toTextArray = (value: unknown) =>
+  Array.isArray(value) ? value.map((item) => toText(item)) : []
+
+const careerTimeline = computed<CareerEntry[]>(() => {
+  const timeline = tm('career.timeline')
+
+  if (!Array.isArray(timeline)) {
+    return []
+  }
+
+  return timeline.map((entry) => {
+    const item = entry as Record<string, unknown>
+
+    return {
+      company: toText(item.company),
+      role: toText(item.role),
+      startDate: toText(item.startDate),
+      endDate: toText(item.endDate),
+      overview: toText(item.overview),
+      responsibilities: toTextArray(item.responsibilities),
+      achievements: toTextArray(item.achievements),
+      stack: toTextArray(item.stack),
+    }
+  })
+})
+
+const careerLabels = computed<CareerLabels>(() => {
+  const labels = tm('career.labels') as Record<string, unknown>
+
+  return {
+    responsibilities: toText(labels.responsibilities),
+    achievements: toText(labels.achievements),
+    techStack: toText(labels.techStack),
+  }
+})
+
+const skillsCategories = computed<SkillsCategory[]>(() => {
+  const categories = tm('skills.categories')
+
+  if (!Array.isArray(categories)) {
+    return []
+  }
+
+  return categories.map((entry) => {
+    const item = entry as Record<string, unknown>
+
+    return {
+      title: toText(item.title),
+      description: toText(item.description),
+      items: toTextArray(item.items),
+    }
+  })
+})
+
+const educationEntry = computed<EducationEntry>(() => {
+  const entry = tm('education.entry') as Record<string, unknown>
+
+  return {
+    institution: toText(entry.institution),
+    degree: toText(entry.degree),
+    major: toText(entry.major),
+    graduationYear: toText(entry.graduationYear),
+    summary: toText(entry.summary),
+  }
+})
+
+const projects = computed<ProjectEntry[]>(() => {
+  const items = tm('projects.items')
+
+  if (!Array.isArray(items)) {
+    return []
+  }
+
+  return items.map((entry) => {
+    const item = entry as Record<string, unknown>
+
+    return {
+      title: toText(item.title),
+      status: toText(item.status),
+      thumbnail: toText(item.thumbnail),
+      description: toText(item.description),
+      role: toText(item.role),
+      techStack: toTextArray(item.techStack),
+      challenges: toTextArray(item.challenges),
+      achievements: toTextArray(item.achievements),
+      github: toText(item.github),
+      demo: toText(item.demo),
+    }
+  })
+})
+
+const projectLabels = computed<ProjectLabels>(() => {
+  const labels = tm('projects.labels') as Record<string, unknown>
+
+  return {
+    myRole: toText(labels.myRole),
+    techStack: toText(labels.techStack),
+    challenges: toText(labels.challenges),
+    achievements: toText(labels.achievements),
+    github: toText(labels.github),
+    demo: toText(labels.demo),
+  }
+})
+
+const isExternalLink = (value: unknown) => {
+  if (typeof value !== 'string') {
+    return false
+  }
+
+  const normalized = value.trim().toLowerCase()
+  return normalized.startsWith('http://') || normalized.startsWith('https://')
+}
 
 const experienceStartDate = new Date(2015, 6, 1)
 
