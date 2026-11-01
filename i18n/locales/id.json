@@ -63,13 +63,13 @@
     },
     "position": {
       "label": "Posisi Saat Ini",
-      "value": "Engineering Manager",
-      "description": "Saya memimpin eksekusi engineering dengan fokus pada kejelasan, keandalan, dan hasil yang berdampak bagi bisnis serta tim."
+      "value": "Fullstack Software Engineer Expert",
+      "description": "Saya mengembangkan dan mengelola CRM Platform di Dana, dengan fokus pada kualitas kode, keandalan sistem, dan dampak nyata bagi bisnis."
     },
     "company": {
       "label": "Perusahaan Saat Ini",
-      "value": "Kawan Lama Group",
-      "description": "Saat ini saya bekerja di Kawan Lama Group, membantu tim membangun sistem yang andal dan meningkatkan kualitas delivery."
+      "value": "Dana (PT Aliansi Teknologi Indonesia)",
+      "description": "Saat ini saya bekerja di Dana, menangani CRM Platform dan membantu membangun sistem yang andal serta meningkatkan kualitas delivery."
     },
     "philosophy": {
       "label": "Philosophy",
@@ -93,10 +93,25 @@
     },
     "timeline": [
       {
+        "company": "Dana (PT Aliansi Teknologi Indonesia)",
+        "role": "Fullstack Software Engineer Expert",
+        "startDate": "November 2026",
+        "endDate": "Sekarang",
+        "overview": "Mengembangkan dan mengelola CRM Platform sebagai fullstack engineer, mulai dari desain solusi hingga operasional produksi, agar tim bisnis dapat mengelola data dan interaksi pelanggan secara andal dan terukur.",
+        "responsibilities": [
+          "Merancang, membangun, dan memelihara fitur CRM Platform end-to-end, mencakup backend service, API, dan antarmuka frontend.",
+          "Mengelola data pelanggan, segmentasi, dan integrasi dengan sistem internal maupun pihak ketiga, termasuk kanal komunikasi dan campaign.",
+          "Menjaga performa, keandalan, dan keamanan platform melalui code review, monitoring, penanganan insiden, dan perbaikan berkelanjutan.",
+          "Berkolaborasi dengan product, bisnis, dan tim engineering lain untuk menerjemahkan kebutuhan menjadi solusi teknis yang tepat guna."
+        ],
+        "achievements": [],
+        "stack": []
+      },
+      {
         "company": "Kawan Lama Group",
         "role": "Engineering Manager",
         "startDate": "Maret 2023",
-        "endDate": "Sekarang",
+        "endDate": "Oktober 2026",
         "overview": "Memimpin modernisasi platform enterprise di enam unit bisnis, dengan cakupan leadership, arsitektur platform, dan delivery governance untuk operasional retail berskala nasional.",
         "responsibilities": [
           "Memimpin tim lintas fungsi yang terdiri dari backend engineer dan frontend engineer di berbagai platform retail.",
