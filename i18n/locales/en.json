@@ -62,13 +62,13 @@
     },
     "position": {
       "label": "Current Position",
-      "value": "Engineering Manager",
-      "description": "I lead engineering execution with a focus on clarity, reliability, and outcomes that matter for the business and the team."
+      "value": "Fullstack Software Engineer Expert",
+      "description": "I develop and manage the CRM Platform at Dana, focusing on code quality, system reliability, and real business impact."
     },
     "company": {
       "label": "Current Company",
-      "value": "Kawan Lama Group",
-      "description": "I currently work at Kawan Lama Group, where I help teams build dependable systems and improve delivery quality."
+      "value": "Dana (PT Aliansi Teknologi Indonesia)",
+      "description": "I currently work at Dana, handling the CRM Platform and helping build dependable systems and improve delivery quality."
     },
     "philosophy": {
       "label": "Philosophy",
@@ -92,10 +92,25 @@
     },
     "timeline": [
       {
+        "company": "Dana (PT Aliansi Teknologi Indonesia)",
+        "role": "Fullstack Software Engineer Expert",
+        "startDate": "November 2026",
+        "endDate": "Present",
+        "overview": "Develop and manage the CRM Platform as a fullstack engineer, from solution design to production operations, so business teams can manage customer data and interactions reliably and at scale.",
+        "responsibilities": [
+          "Design, build, and maintain CRM Platform features end-to-end, covering backend services, APIs, and frontend interfaces.",
+          "Manage customer data, segmentation, and integrations with internal and third-party systems, including communication channels and campaigns.",
+          "Keep the platform performant, reliable, and secure through code reviews, monitoring, incident handling, and continuous improvement.",
+          "Collaborate with product, business, and other engineering teams to turn requirements into fit-for-purpose technical solutions."
+        ],
+        "achievements": [],
+        "stack": []
+      },
+      {
         "company": "Kawan Lama Group",
         "role": "Engineering Manager",
         "startDate": "March 2023",
-        "endDate": "Present",
+        "endDate": "October 2026",
         "overview": "Lead enterprise platform modernization across six business units, balancing engineering leadership, platform architecture, and delivery governance for nationwide retail operations.",
         "responsibilities": [
           "Lead a cross-functional team of backend and frontend engineers across multiple retail platforms.",
