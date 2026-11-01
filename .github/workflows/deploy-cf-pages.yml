@@ -19,11 +19,11 @@ jobs:
       PROJECT_NAME: ${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME || 'portfolio' }}
       BUILD_OUTPUT_DIR: .output/public
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v5
         with:
-          node-version: 24
+          node-version: 26
           cache: npm
 
       - name: Install dependencies
